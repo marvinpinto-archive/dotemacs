@@ -2,6 +2,9 @@
 ;;  Buffer Settings
 ;; =================
 
+;; Get rid of the annoying ^M character when using git
+(prefer-coding-system 'utf-8)
+
 ;; View line as well as column numbers in the modeline
 (setq line-number-mode t)
 (setq column-number-mode t)

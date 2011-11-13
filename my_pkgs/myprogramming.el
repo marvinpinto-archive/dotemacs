@@ -103,11 +103,15 @@
 ;; ;; (if window-system (require 'caml-font))
 
 
-;; HTML/XML mode
+;; HTML
 (setq auto-mode-alist
-      (cons '("\\.\\(xml\\|xsl\\|rng\\|html\\|shtml\\|xhtml\\|jspx\\)\\'" . html-mode)
+      (cons '("\\.\\(rng\\|html\\|shtml\\|xhtml\\|jspx\\)\\'" . html-mode)
 	    auto-mode-alist))
 
+;; XML mode
+(setq auto-mode-alist
+      (cons '("\\.\\(xml\\|xsl\\|xsd\\)\\'" . nxml-mode)
+	    auto-mode-alist))
 
 ;; Eiffel
 (add-to-list 'auto-mode-alist '("\\.e\\'" . eiffel-mode))
