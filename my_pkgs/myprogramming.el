@@ -6,6 +6,10 @@
 (require 'font-lock)
 (global-font-lock-mode 1)
 
+;; Git Mode (magit)
+(add-to-list 'load-path "~/configs/emacs/installed_pkgs/magit")
+(require 'magit)
+(global-set-key (kbd "C-x C-g") 'magit-status)
 
 ;; ECB setup
 (setq ecb-tip-of-the-day nil)

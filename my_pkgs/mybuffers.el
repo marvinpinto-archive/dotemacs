@@ -81,7 +81,7 @@
       (goto-char opoint)
       (message "Long line not found"))))
 (global-unset-key [?\C-l])
-(define-key global-map [?\C-l] 'next-long-line) 
+(define-key global-map [?\C-l] 'next-long-line)
 
 
 ;; reload current buffer
