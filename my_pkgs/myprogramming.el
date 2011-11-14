@@ -10,6 +10,9 @@
 (add-to-list 'load-path "~/configs/emacs/installed_pkgs/magit")
 (require 'magit)
 (global-set-key (kbd "C-x C-g") 'magit-status)
+(defun my-magit-log-edit-mode-hook ()
+  (setq fill-column 70))
+(add-hook 'magit-log-edit-mode-hook 'my-magit-log-edit-mode-hook)
 
 ;; ECB setup
 (setq ecb-tip-of-the-day nil)
