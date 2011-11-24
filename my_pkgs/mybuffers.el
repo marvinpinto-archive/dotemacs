@@ -124,6 +124,15 @@
 (global-set-key "\C-x\C-k" 'kill-this-buffer)
 
 
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer 
+	(delq (current-buffer) 
+	      (remove-if-not 'buffer-file-name (buffer-list)))))
+(global-set-key "\C-x\C-o" 'kill-other-buffers)
+
+
 ;; ;; Cycle between buffers (compatible with term mode)
 ;; (global-set-key [?\C-c right] 'next-buffer)
 ;; (global-set-key [?\C-c left] 'previous-buffer)
