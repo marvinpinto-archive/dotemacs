@@ -31,6 +31,15 @@
 	    (hs-minor-mode t)))
 
 
+;; Treat Java 1.5 @-style annotations as comments
+(add-hook 'java-mode-hook 
+	  '(lambda () "Treat Java 1.5 @-style annotations as comments."
+	     (setq c-comment-start-regexp 
+		   "\\(@\\|/\\(/\\|[*][*]?\\)\\)")
+	     (modify-syntax-entry ?@ "< b" 
+				  java-mode-syntax-table)))
+
+
 ;; comment/uncomment
 ;; easy commenting out of lines
 (defun uncomment-region (beg end)
