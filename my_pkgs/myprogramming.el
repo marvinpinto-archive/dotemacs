@@ -155,10 +155,10 @@
 			      auto-mode-alist))
 
 
-;; ;; JS2 mode
-;; (require 'js2-mode)
-;; (setq auto-mode-alist (append '(("\\.js2$" . js2-mode))
-;;                                    auto-mode-alist))
+;; JS2 mode
+(require 'js2-mode)
+(setq auto-mode-alist (append '(("\\.js2$" . js2-mode))
+                                   auto-mode-alist))
 
 
 ;; Batch Files
