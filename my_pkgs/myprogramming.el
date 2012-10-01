@@ -201,6 +201,13 @@
 ;; Apache Mode
 (autoload 'apache-mode "apache-mode.el" "Major mode for editing Apache config files")
 
+;; NSIS Mode
+(autoload 'nsis-mode "nsis-mode" "NSIS mode" t)
+(setq auto-mode-alist (append '(("\\.\\([Nn][Ss][Ii]\\)$" .
+                                 nsis-mode)) auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.\\([Nn][Ss][Hh]\\)$" .
+                                 nsis-mode)) auto-mode-alist))
+
 
 (defun select-current-line ()
   "Select the current line"
