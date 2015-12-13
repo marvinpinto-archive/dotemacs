@@ -1,2 +1,3 @@
-Work in progress.. be nice!
+# Emacs Dotfiles
 
+![unmaintained](http://img.shields.io/badge/status-unmaintained-red.png)
